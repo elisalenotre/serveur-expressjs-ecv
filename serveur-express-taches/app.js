@@ -5,10 +5,10 @@ const PORT = 3001;
 
 app.use(express.json());
 
-// Configuration de la liste des emails
+// La liste des emails
 const emailList = ["zackery.fay69@ethereal.email"];
 
-// Configuration de Nodemailer avec Ethereal
+// Config Nodemailer avec Ethereal
 const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
     port: 587,
