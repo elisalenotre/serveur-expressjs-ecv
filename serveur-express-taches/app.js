@@ -7,22 +7,22 @@ const PORT = 3001;
 app.use(express.json());
 
 // Configuration des emails en dur
-const emailList = ["arnold.schneider50@ethereal.email"];
+const emailList = ["zackery.fay69@ethereal.email"];
 
 // Configuration de Nodemailer
 const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
     port: 587,
     auth: {
-        user: 'arnold.schneider50@ethereal.email',
-        pass: 'q8WJvxE3bV71pFuF7Z'
+        user: 'zackery.fay69@ethereal.email',
+        pass: 'SZThSsvxDJn5fazZcX'
     }
 });
 
 // Fonction pour envoyer un email
 const envoyerEmail = async (sujet, texte) => {
     const mailOptions = {
-        from: 'arnold.schneider50@ethereal.email',
+        from: 'zackery.fay69@ethereal.email',
         to: emailList,
         subject: sujet,
         text: texte
