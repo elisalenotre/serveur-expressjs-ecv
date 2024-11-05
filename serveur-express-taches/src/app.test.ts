@@ -2,7 +2,7 @@ import request from 'supertest';
 import { app } from './app';
 
 describe('Tests API pour les tâches', () => {
-    it('POST /taches - devrait créer une nouvelle tâche', async () => {
+    it('POST /taches - créer une nouvelle tâche', async () => {
         const response = await request(app)
             .post('/taches')
             .send({ nom: 'Nouvelle Tâche' });
@@ -12,14 +12,14 @@ describe('Tests API pour les tâches', () => {
         expect(response.body.nom).toBe('Nouvelle Tâche');
     });
 
-    it('GET /taches - devrait renvoyer la liste des tâches', async () => {
+    it('GET /taches - consulter la liste des tâches', async () => {
         const response = await request(app).get('/taches');
 
         expect(response.status).toBe(200);
         expect(Array.isArray(response.body)).toBeTruthy();
     });
 
-    it('GET /taches/:id - devrait renvoyer une tâche par ID', async () => {
+    it('GET /taches/:id - consulter une tâche par ID', async () => {
         const newTask = await request(app)
             .post('/taches')
             .send({ nom: 'Tâche à consulter' });
@@ -31,7 +31,7 @@ describe('Tests API pour les tâches', () => {
         expect(response.body.nom).toBe('Tâche à consulter');
     });
 
-    it('PUT /taches/:id - devrait mettre à jour une tâche par ID', async () => {
+    it('PUT /taches/:id - mettre à jour une tâche par ID', async () => {
         const newTask = await request(app)
             .post('/taches')
             .send({ nom: 'Tâche mise à jour' });
@@ -44,7 +44,7 @@ describe('Tests API pour les tâches', () => {
         expect(response.body.nom).toBe('Tâche mise à jour');
     });
 
-    it('DELETE /taches/:id - devrait supprimer une tâche par ID', async () => {
+    it('DELETE /taches/:id - supprimer une tâche par ID', async () => {
         const newTask = await request(app)
             .post('/taches')
             .send({ nom: 'Tâche à supprimer' });
