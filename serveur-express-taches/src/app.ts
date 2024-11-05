@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json());
 
-// La liste des emails
+// La liste des emails (car de base, je voulais envoyer à plusieurs emails)
 const emailList = ["mandy83@ethereal.email"];
 
 // Config Nodemailer avec Ethereal
