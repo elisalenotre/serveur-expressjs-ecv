@@ -2,7 +2,6 @@ import express, { Request, Response } from 'express';
 import nodemailer from 'nodemailer';
 
 const app = express();
-const PORT = 3001;
 
 app.use(express.json());
 
@@ -87,6 +86,11 @@ app.delete('/taches/:id', async (req: Request, res: Response) => {
     res.status(200).json({ message: "Tâche supprimée", tache: tacheSupprimee });
 });
 
-app.listen(PORT, () => {
-    console.log(`Serveur en cours d'exécution sur le port ${PORT}`);
-});
+export { app };
+
+if (require.main === module) {
+    const PORT = process.env.PORT || 3001;
+    app.listen(PORT, () => {
+        console.log(`Serveur en cours d'exécution sur le port ${PORT}`);
+    });
+}
