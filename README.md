@@ -4,25 +4,25 @@ Un serveur basique construit avec Express.js dans le cadre d'un projet à l'éco
 
 ## Installation
 
-1. Clone ce dépôt sur ta machine locale :
+1. Cloner ce dépôt :
 
    ```bash
    git clone https://github.com/ton-utilisateur/serveur-expressjs-ecv.git
    ```
 
-2. Accède au dossier du projet :
+2. Accèder au dossier du projet :
 
    ```bash
    cd serveur-expressjs-ecv
    ```
 
-3. Installe les dépendances :
+3. Installer les dépendances :
 
    ```bash
    npm install
    ```
 
-4. Lance e serveur :
+4. Lancer le serveur :
 
    ```bash
    npm start
