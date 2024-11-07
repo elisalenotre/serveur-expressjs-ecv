@@ -22,7 +22,13 @@ Un serveur basique construit avec Express.js dans le cadre d'un projet à l'éco
    npm install
    ```
 
-4. Lancer le serveur :
+4. Accèder au dossier du projet :
+
+   ```bash
+   cd serveur-expressjs-taches
+   ```
+
+5. Lancer le serveur :
 
    ```bash
    node dist/app.js
@@ -35,12 +41,9 @@ Ce projet utilise [Jest](https://jestjs.io/) pour les tests unitaires.
 Pour exécuter les tests :
 
 ```bash
+cd src
 npx jest
 ```
-
-### Exemple de tests actuels
-
-Actuellement, le projet contient des tests pour vérifier le bon fonctionnement des routes API de gestion des tâches (`POST`, `GET`, `PUT`, et `DELETE`).
 
 ## Structure du projet
 
