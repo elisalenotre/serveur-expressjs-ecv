@@ -25,7 +25,7 @@ Un serveur basique construit avec Express.js dans le cadre d'un projet à l'éco
 4. Lancer le serveur :
 
    ```bash
-   npm start
+   node dist/app.js
    ```
 
 ## Tests
